@@ -9,12 +9,12 @@
 
 <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
-<script type="text/javascript" src="../js/admin/login.js"></script>
+<script type="text/javascript" src="../js/jsp/index.js"></script>
 
 <link type="text/css" rel="stylesheet" href="../css/common.css">
 <link type="text/css" rel="stylesheet" href="../css/bootstrap/bootstrap.css">
 
-<link type="text/css" rel="stylesheet" href="../css/jsp/login.css">
+<link type="text/css" rel="stylesheet" href="../css/jsp/index.css">
 
 <title>Login</title>
 </head>

@@ -9,16 +9,16 @@
 
     <context  id="mysqlTables"   targetRuntime="MyBatis3">
 
+    <!-- 数据库连接  -->
     <jdbcConnection
-        driverClass="${jdbc.sqlserver.driver}"
-        connectionURL="${jdbc.sqlserver.url}"
-        userId="${jdbc.sqlserver.username}"
-        password="${jdbc.sqlserver.password}"/>
+        driverClass="${jdbc.mysql.driver}"
+        connectionURL="${jdbc.mysql.url}"
+        userId="${jdbc.mysql.username}"
+        password="${jdbc.mysql.password}"/>
 
- 
 
-      <!--指定生成的类型为java类型，避免数据库中number等类型字段 -->
 
+    <!--指定生成的类型为java类型，避免数据库中number等类型字段 -->
     <javaTypeResolver >
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
@@ -38,17 +38,19 @@
 
  
 
-      <!--自动生成的*Mapper.java存放路径 -->
-
+	<!--自动生成的*Mapper.java存放路径 -->
     <javaClientGenerator type="XMLMAPPER" targetPackage="com.ybh.front.mapper"  targetProject="src/main/java">
         <property  name="enableSubPackages"  value="true"/>
     </javaClientGenerator>
 
+
+    <!-- 指定生成的表 -->
+    <table  tableName="AprioriUser"  domainObjectName="User"></table>
+    <table  tableName="AprioriProduct"  domainObjectName="Product"></table>
  
-   <table  tableName="FreeHost_USER"  domainObjectName="User"></table>
  
 <!-- 
-    <table  tableName="FreeHost_USER"  domainObjectName="User" 
+    <table  tableName="AprioriUser"  domainObjectName="User" 
         enableCountByExample="true"   enableUpdateByExample="true" 
         enableDeleteByExample="false"  enableSelectByExample="true" 
         selectByExampleQueryId="true">
@@ -56,8 +58,6 @@
     </table>
       
  -->
-
-
       
    </context>
 
